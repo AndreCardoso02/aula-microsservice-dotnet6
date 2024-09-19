@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GeekShopping.ProductAPI.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace GeekShopping.ProductAPI.Context
 {
@@ -7,5 +8,7 @@ namespace GeekShopping.ProductAPI.Context
         public MySQLContext() {}
 
         public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) {}
+
+        public DbSet<Product> Products { get; set; }
     }
 }
