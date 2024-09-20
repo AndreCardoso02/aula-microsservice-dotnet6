@@ -10,7 +10,7 @@ namespace GeekShopping.ProductAPI.Model
         [Column("name")]
         [Required]
         [StringLength(150)]
-        public required string Name { get; set; }
+        public string Name { get; set; }
 
         [Column("price")]
         [Required]
@@ -24,7 +24,7 @@ namespace GeekShopping.ProductAPI.Model
         [Column("category_name")]
         [Required]
         [StringLength(50)]
-        public required string CategoryName { get; set; }
+        public string CategoryName { get; set; }
 
         [Column("image_url")]
         [StringLength(300)]
