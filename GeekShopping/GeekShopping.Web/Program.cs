@@ -1,3 +1,4 @@
+using GeekShopping.Web.Services;
 using GeekShopping.Web.Services.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // Ijectando HttpClient
-builder.Services.AddHttpClient<IProductService, IProductService>(c =>
+builder.Services.AddHttpClient<IProductService, ProductService>(c =>
     c.BaseAddress = new Uri(builder.Configuration["ServiceUrls:ProductAPI"]));
 
 // Add services to the container.
