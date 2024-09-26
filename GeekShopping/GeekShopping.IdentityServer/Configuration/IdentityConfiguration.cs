@@ -52,8 +52,8 @@ namespace GeekShopping.IdentityServer.Configuration
                         new Secret("my_super_secret".Sha256())
                     },
                     AllowedGrantTypes = GrantTypes.Code,
-                    RedirectUris = {"http://localhost:44396/signin-oidc"}, // porta ssl: 44396 ; porta normal = 46179
-                    PostLogoutRedirectUris = { "http://localhost:44396/signout-callback-oidc" },
+                    RedirectUris = {"https://localhost:4430/signin-oidc"}, // porta ssl: 4430 ; porta normal = 4431
+                    PostLogoutRedirectUris = { "https://localhost:4430/signout-callback-oidc" },
                     AllowedScopes = new List<string>
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
