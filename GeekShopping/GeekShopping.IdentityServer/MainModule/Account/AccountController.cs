@@ -17,6 +17,7 @@ using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
 using Duende.IdentityServer.Test;
+using GeekShopping.IdentityServer.Extensions;
 
 namespace IdentityServerHost.Quickstart.UI
 {

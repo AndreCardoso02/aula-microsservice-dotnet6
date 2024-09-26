@@ -1,22 +1,30 @@
-html {
-  font-size: 14px;
-}
+﻿.welcome-page .logo {
+  width: 64px; }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+.icon-banner {
+  width: 32px; }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+.body-container {
+  margin-top: 60px;
+  padding-bottom: 40px; }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+.welcome-page li {
+  list-style: none;
+  padding: 4px; }
 
-body {
-  margin-bottom: 60px;
-}
+.logged-out-page iframe {
+  display: none;
+  width: 0;
+  height: 0; }
+
+.grants-page .card {
+  margin-top: 20px;
+  border-bottom: 1px solid lightgray; }
+  .grants-page .card .card-title {
+    font-size: 120%;
+    font-weight: bold; }
+    .grants-page .card .card-title img {
+      width: 100px;
+      height: 100px; }
+  .grants-page .card label {
+    font-weight: bold; }

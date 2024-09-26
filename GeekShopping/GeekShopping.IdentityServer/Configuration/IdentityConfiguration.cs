@@ -6,7 +6,7 @@ namespace GeekShopping.IdentityServer.Configuration
     public static class IdentityConfiguration
     {
         public const string Admin = "Admin";
-        public const string Customer = "Customer";
+        public const string Client = "Client";
 
         // Identity resource, nomes de grupos de claims que podem ser protegido
         public static IEnumerable<IdentityResource> IdentityResources =>
