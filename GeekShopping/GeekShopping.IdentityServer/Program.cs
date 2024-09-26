@@ -1,4 +1,5 @@
 using GeekShopping.IdentityServer.Configuration;
+using GeekShopping.IdentityServer.Initializer;
 using GeekShopping.IdentityServer.Model;
 using GeekShopping.IdentityServer.Model.Context;
 using Microsoft.AspNetCore.Identity;
@@ -36,6 +37,10 @@ var builderIdentity = builder.Services.AddIdentityServer(options =>
     .AddInMemoryClients(IdentityConfiguration.Clients)
     .AddAspNetIdentity<ApplicationUser>();
 
+// Ijecao de dependencia
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+
+
 builderIdentity.AddDeveloperSigningCredential();
 
 // Add services to the container.
@@ -54,6 +59,17 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Rodando as migracoes
+using (var serviceScope = app.Services.CreateScope())
+{
+    if (serviceScope != null)
+    {
+        var initializer = serviceScope.ServiceProvider.GetService<IDbInitializer>();
+        if (initializer != null)
+            initializer.Initialize();
+    }
+}
 
 // adicionando o identity duende
 app.UseIdentityServer();
