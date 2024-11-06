@@ -17,7 +17,7 @@ namespace GeekShopping.IdentityServer.Configuration
                 new IdentityResources.Profile()
             };
 
-        // Identity Scope - Objectos com informações do perfil (Nome, Sobrenome, Username), Identity Claim
+        // Identity Scope - identificadores ou recursos que um utilizador pode acessar, ApiScope - contém objectos com informações do perfil (Nome, Sobrenome, Username), Identity Claim
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>()
             {
@@ -27,7 +27,7 @@ namespace GeekShopping.IdentityServer.Configuration
                 new ApiScope(name: "delete", "Delete data.")
             };
 
-        // Client - componente de software que requisita um recurso a um server
+        // Client - componente de software que requisita um recurso a um identity server
         public static IEnumerable<Client> Clients =>
             new List<Client>()
             {
