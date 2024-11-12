@@ -33,7 +33,7 @@ builder.Services.AddControllers();
 
 // Configuraç]oes de seguranca
 builder.Services.AddAuthentication("Bearer") // Autenticação
-    .AddJwtBearer(options =>
+    .AddJwtBearer("Bearer", options =>
     {
         options.Authority = "https://localhost:4435"; // Identity Server
         options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
