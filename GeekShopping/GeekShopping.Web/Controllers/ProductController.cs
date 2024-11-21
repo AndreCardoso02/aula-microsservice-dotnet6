@@ -70,8 +70,8 @@ namespace GeekShopping.Web.Controllers
             return View(model);
         }
 
-        [Authorize]
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Delete(long id)
         {
             if (id <= 0) return NotFound();
