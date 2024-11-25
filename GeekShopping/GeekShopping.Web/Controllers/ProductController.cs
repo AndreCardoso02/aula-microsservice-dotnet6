@@ -16,7 +16,7 @@ namespace GeekShopping.Web.Controllers
             _service = service ?? throw new ArgumentNullException(nameof(service));
         }
 
-        [Authorize]
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var token = await HttpContext.GetTokenAsync("access_token");
