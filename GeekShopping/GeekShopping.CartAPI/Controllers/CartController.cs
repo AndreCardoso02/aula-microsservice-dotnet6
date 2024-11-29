@@ -25,7 +25,7 @@ namespace GeekShopping.CartAPI.Controllers
             return Ok(cart);
         }
 
-        [HttpPost("add-cart/{id}")]
+        [HttpPost("add-cart")]
         //[Authorize]
         public async Task<ActionResult<CartVO>> AddCart(CartVO vo)
         {
@@ -34,7 +34,7 @@ namespace GeekShopping.CartAPI.Controllers
             return Ok(cart);
         }
 
-        [HttpPost("update-cart/{id}")]
+        [HttpPut("update-cart")]
         //[Authorize]
         public async Task<ActionResult<CartVO>> UpdateCart(CartVO vo)
         {
@@ -43,7 +43,7 @@ namespace GeekShopping.CartAPI.Controllers
             return Ok(cart);
         }
 
-        [HttpPost("remove-cart/{id}")]
+        [HttpDelete("remove-cart/{id}")]
         //[Authorize]
         public async Task<ActionResult<CartVO>> RemoveCart(int id)
         {
