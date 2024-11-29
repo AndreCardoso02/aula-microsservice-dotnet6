@@ -14,5 +14,8 @@ namespace GeekShopping.CartAPI.Model
 
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
+
+        [Column("count")]
+        public int Count { get; set; }
     }
 }
