@@ -32,7 +32,7 @@ namespace GeekShopping.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Create(ProductModel model)
+        public async Task<IActionResult> Create(ProductViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace GeekShopping.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Update(ProductModel model)
+        public async Task<IActionResult> Update(ProductViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace GeekShopping.Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = Role.Admin)]
-        public async Task<IActionResult> Delete(ProductModel model)
+        public async Task<IActionResult> Delete(ProductViewModel model)
         {
             if (model.Id > 0)
             {
