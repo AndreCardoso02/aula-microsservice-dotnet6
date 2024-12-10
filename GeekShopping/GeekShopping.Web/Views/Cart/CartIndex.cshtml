@@ -88,7 +88,16 @@
                         <div class="col-6 text-end">
                             <span class="text-danger" style="font-size: 21px;">
                                 Purchase Amount: @(string.Format("{0:c}", Model.CartHeader.PurchaseAmount))
-                                <br />
+                            </span>
+                            <br />
+                            <span>
+                                @if (Model.CartHeader.DiscountAmount > 0)
+                                {
+                                    <span class="text-success">
+                                        Discount Amount: @string.Format("{0:c}", Model.CartHeader.DiscountAmount)
+                                        <br />
+                                    </span>
+                                }
                             </span>
                         </div>
                     </div>
