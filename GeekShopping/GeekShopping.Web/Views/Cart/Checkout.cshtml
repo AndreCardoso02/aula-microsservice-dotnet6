@@ -72,7 +72,7 @@
                             }
                             <div class="row">
                                 <div class="col-12 text-right pr-4 text-danger">
-                                    Purchase Amount: @string.Format("{c:0}", Model.CartHeader.PurchaseAmount)
+                                    Purchase Amount: @string.Format("{0:c}", Model.CartHeader.PurchaseAmount)
                                     <br />
                                     <span>
                                         @if (Model.CartHeader.DiscountAmount > 0)
