@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.CouponAPI", "G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{9CF7368F-52A0-46CD-9247-DCB649DE699A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.MessageBus", "GeekShopping.MessageBus\GeekShopping.MessageBus.csproj", "{AB3333A0-9766-4078-98AE-71EA889B9BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.MessageBus", "GeekShopping.MessageBus\GeekShopping.MessageBus.csproj", "{AB3333A0-9766-4078-98AE-71EA889B9BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.OrderAPI", "GeekShopping.OrderAPI\GeekShopping.OrderAPI.csproj", "{540021C9-24B3-44F9-BD6E-DB7104398422}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{AB3333A0-9766-4078-98AE-71EA889B9BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB3333A0-9766-4078-98AE-71EA889B9BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB3333A0-9766-4078-98AE-71EA889B9BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540021C9-24B3-44F9-BD6E-DB7104398422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540021C9-24B3-44F9-BD6E-DB7104398422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540021C9-24B3-44F9-BD6E-DB7104398422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540021C9-24B3-44F9-BD6E-DB7104398422}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{5FB1FA2C-80F3-49D7-9B77-EF433B0B2D66} = {4CA9C1A0-76EE-4C7E-BEC5-F0743FF0BE4B}
 		{C939B4E4-1E52-44B8-A92F-CB5DB87025DA} = {4CA9C1A0-76EE-4C7E-BEC5-F0743FF0BE4B}
 		{AB3333A0-9766-4078-98AE-71EA889B9BA2} = {9CF7368F-52A0-46CD-9247-DCB649DE699A}
+		{540021C9-24B3-44F9-BD6E-DB7104398422} = {4CA9C1A0-76EE-4C7E-BEC5-F0743FF0BE4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3DDFA8E-6CE0-455C-9461-72CC19933D88}
