@@ -35,7 +35,7 @@ namespace GeekShopping.OrderAPI.Model.Base
 
         [Column("total_itens")]
         public int TotalItens { get; set; }
-        public IEnumerable<OrderDetail>? OrderDetails { get; set; }
+        public List<OrderDetail>? OrderDetails { get; set; }
 
         [Column("payment_status")]
         public bool PaymentStatus { get; set; }
