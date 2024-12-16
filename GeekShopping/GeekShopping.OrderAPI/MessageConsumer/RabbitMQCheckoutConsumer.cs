@@ -74,7 +74,7 @@ namespace GeekShopping.OrderAPI.MessageConsumer
                 OrderDetail detail = new()
                 {
                     ProductId = details.ProductId,
-                    ProductName = details.Product.Name,
+                    ProductName = details.Product!.Name!,
                     Price = details.Product.Price,
                     Count = details.Count,
                 };
