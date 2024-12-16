@@ -1,4 +1,5 @@
 using GeekShopping.OrderAPI.Model.Base;
+using GeekShopping.OrderAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -15,14 +16,13 @@ builder.Services.AddDbContext<MySQLContext>(options =>
                         new Version(8, 0, 38)));
 });
 
-// Adicionando as configuracoes do Automapper
-//IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-//builder.Services.AddSingleton(mapper);
-//builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
 // Ijectando as dependencias nos services
-//builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-//builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
+var builderExtra = new DbContextOptionsBuilder<MySQLContext>();
+builderExtra.UseMySql(connection,
+                    new MySqlServerVersion(
+                        new Version(8, 0, 38)));
+
+builder.Services.AddSingleton(new OrderRepository(builderExtra.Options));
 
 
 builder.Services.AddControllers();

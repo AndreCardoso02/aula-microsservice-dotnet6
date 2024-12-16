@@ -8,7 +8,7 @@ namespace GeekShopping.OrderAPI.Model.Base
 
         public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) { }
 
-        public DbSet<OrderDetail> CartDetails { get; set; }
-        public DbSet<OrderHeader> CartHeaders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<OrderHeader> OrderHeaders { get; set; }
     }
 }
