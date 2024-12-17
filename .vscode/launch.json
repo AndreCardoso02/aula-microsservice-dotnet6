@@ -1,0 +1,154 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Coupon Service",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // Se tiver alterado as estruturas de destino, certifique-se de atualizar o caminho do programa.
+            "program": "${workspaceFolder}/GeekShopping/GeekShopping.CouponAPI/bin/Debug/net8.0/GeekShopping.CouponAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GeekShopping/GeekShopping.CouponAPI",
+            "stopAtEntry": false,
+            // Habilitar a inicialização de um navegador da web quando o ASP.NET Core for iniciado. Para obter mais informações: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger/index.html"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Cart Service",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // Se tiver alterado as estruturas de destino, certifique-se de atualizar o caminho do programa.
+            "program": "${workspaceFolder}/GeekShopping/GeekShopping.CartAPI/bin/Debug/net8.0/GeekShopping.CartAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GeekShopping/GeekShopping.CartAPI",
+            "stopAtEntry": false,
+            // Habilitar a inicialização de um navegador da web quando o ASP.NET Core for iniciado. Para obter mais informações: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger/index.html"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Identity Server",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // Se tiver alterado as estruturas de destino, certifique-se de atualizar o caminho do programa.
+            "program": "${workspaceFolder}/GeekShopping/GeekShopping.IdentityServer/bin/Debug/net8.0/GeekShopping.IdentityServer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GeekShopping/GeekShopping.IdentityServer",
+            "stopAtEntry": false,
+            // Habilitar a inicialização de um navegador da web quando o ASP.NET Core for iniciado. Para obter mais informações: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Order Service",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // Se tiver alterado as estruturas de destino, certifique-se de atualizar o caminho do programa.
+            "program": "${workspaceFolder}/GeekShopping/GeekShopping.OrderAPI/bin/Debug/net8.0/GeekShopping.OrderAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GeekShopping/GeekShopping.OrderAPI",
+            "stopAtEntry": false,
+            // Habilitar a inicialização de um navegador da web quando o ASP.NET Core for iniciado. Para obter mais informações: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger/index.html"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Product Service",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // Se tiver alterado as estruturas de destino, certifique-se de atualizar o caminho do programa.
+            "program": "${workspaceFolder}/GeekShopping/GeekShopping.ProductAPI/bin/Debug/net8.0/GeekShopping.ProductAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GeekShopping/GeekShopping.ProductAPI",
+            "stopAtEntry": false,
+            // Habilitar a inicialização de um navegador da web quando o ASP.NET Core for iniciado. Para obter mais informações: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger/index.html"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Web",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // Se tiver alterado as estruturas de destino, certifique-se de atualizar o caminho do programa.
+            "program": "${workspaceFolder}/GeekShopping/GeekShopping.Web/bin/Debug/net8.0/GeekShopping.Web.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GeekShopping/GeekShopping.Web",
+            "stopAtEntry": false,
+            // Habilitar a inicialização de um navegador da web quando o ASP.NET Core for iniciado. Para obter mais informações: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run All",
+            "configurations": [
+                "Coupon Service",
+                "Product Service",
+                "Order Service",
+                "Identity Server",
+                "Cart Service",
+                "Web"
+            ]
+        }
+    ]
+}
