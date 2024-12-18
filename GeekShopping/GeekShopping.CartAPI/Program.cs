@@ -31,8 +31,11 @@ builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
 builder.Services.AddControllers();
 
-// Configuraç]oes de seguranca
-builder.Services.AddAuthentication("Bearer") // Autenticação
+builder.Services.AddHttpClient<ICouponRepository, CouponRepository>(s =>
+    s.BaseAddress = new Uri(builder.Configuration["ServiceUrls:CouponAPI"]!));
+
+// Configuraï¿½]oes de seguranca
+builder.Services.AddAuthentication("Bearer") // Autenticaï¿½ï¿½o
     .AddJwtBearer("Bearer", options =>
     {
         options.Authority = "https://localhost:4435"; // Identity Server

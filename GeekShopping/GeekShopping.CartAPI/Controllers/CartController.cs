@@ -81,7 +81,9 @@ namespace GeekShopping.CartAPI.Controllers
             if (vo?.UserId == null) return BadRequest();
             var cart = await _repository.FindCartByUserId(vo.UserId!);
             if (cart == null) return NotFound();
+
             vo.CartDetails = cart.CartDetails!;
+            vo.DateTime = DateTime.Now;
 
             // Task RabbitMQ Logigc comes here!!
             await _rabbitMQMessageSender.SendMessage(vo, "checkoutqueue");
