@@ -1,5 +1,6 @@
 using GeekShopping.OrderAPI.MessageConsumer;
 using GeekShopping.OrderAPI.Model.Base;
+using GeekShopping.OrderAPI.RabbitMQSender;
 using GeekShopping.OrderAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -25,12 +26,13 @@ builderExtra.UseMySql(connection,
 
 builder.Services.AddSingleton(new OrderRepository(builderExtra.Options));
 builder.Services.AddHostedService<RabbitMQCheckoutConsumer>();
+builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
 
 builder.Services.AddControllers();
 
-// Configuraç]oes de seguranca
-builder.Services.AddAuthentication("Bearer") // Autenticação
+// Configuraï¿½]oes de seguranca
+builder.Services.AddAuthentication("Bearer") // Autenticaï¿½ï¿½o
     .AddJwtBearer("Bearer", options =>
     {
         options.Authority = "https://localhost:4435"; // Identity Server

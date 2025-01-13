@@ -30,4 +30,8 @@
 	  <Folder Include="Controllers\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\GeekShopping.MessageBus\GeekShopping.MessageBus.csproj" />
+	</ItemGroup>
+
 </Project>
