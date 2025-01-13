@@ -70,6 +70,7 @@ namespace GeekShopping.OrderAPI.MessageConsumer
                 PaymentStatus = false,
                 PhoneNumber = vo.PhoneNumber,
                 PurchaseDate = vo.DateTime,
+                PurchaseAmount = vo.PurchaseAmount
             };
 
             foreach (var details in vo.CartDetails)
