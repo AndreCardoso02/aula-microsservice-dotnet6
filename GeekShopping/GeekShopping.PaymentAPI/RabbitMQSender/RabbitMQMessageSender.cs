@@ -12,6 +12,7 @@ namespace GeekShopping.PaymentAPI.RabbitMQSender
         private readonly string _password;
         private readonly string _username;
         private IConnection? _connection;
+        private const string ExchangeName = "FanoutPaymentUpdateExchange";
 
         public RabbitMQMessageSender()
         {
@@ -21,16 +22,16 @@ namespace GeekShopping.PaymentAPI.RabbitMQSender
         }
 
 
-        public async Task SendMessage(BaseMessage message, string queueName)
+        public async Task SendMessage(BaseMessage message)
         {
             if (await ConnectionExists())
             {
                 using var _channel = await _connection.CreateChannelAsync();
-                await _channel.QueueDeclareAsync(queue: queueName, false, false, false, arguments: null);
+                await _channel.ExchangeDeclareAsync(ExchangeName, ExchangeType.Fanout, durable: false); // durable false -: consumiu apaga
 
                 byte[] body = GetMessageAsByteArray(message);
 
-                await _channel.BasicPublishAsync(exchange: "", routingKey: queueName, body: body);
+                await _channel.BasicPublishAsync(exchange: ExchangeName, routingKey: "", body: body);
             }
         }
 
